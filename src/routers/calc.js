@@ -1,5 +1,4 @@
 const express=require('express')
-const express=require('express')
 const router=new express.Router()
 
 router.post('/',async(req,res)=>{
