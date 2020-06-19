@@ -1,6 +1,6 @@
 const path=require('path')
 const express=require('express')
-const hbs=express('hbs')
+const hbs=require('hbs')
 const calc=require('./routers/calc')
 
 const app=express()
