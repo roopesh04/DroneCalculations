@@ -21,7 +21,12 @@ flight_time.addEventListener('submit',(e)=>{
     }else{
         fetch(url).then((response)=>{
             response.json().then((data)=>{
-                sol_flight_time.textContent="flight time="+data.flight_time
+                if(data.flight_time==null){
+                    sol_flight_time.textContent="Please prvide proper values"
+                }else{
+                    sol_flight_time.textContent="flight time="+data.flight_time
+                }
+                
             })
             })
     }
@@ -45,7 +50,11 @@ min_flight_time.addEventListener('submit',(e)=>{
     }else{
         fetch(url).then((response)=>{
             response.json().then((data)=>{
-                sol_min_flight_time.textContent="Minimum Flight time"+data.min_flight_time
+                if(data.min_flight_time==null){
+                    sol_min_flight_time.textContent="Provide proper values"
+                }else{
+                    sol_min_flight_time.textContent="Minimum Flight time="+data.min_flight_time
+                }
             })
         })
     }
