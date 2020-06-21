@@ -91,7 +91,7 @@ max_forword_time.addEventListener('submit',(e)=>{
                 if(data.max_forward_time==null){
                     sol_max_forword_time.textContent="Provide proper values"
                 }else{
-                    sol_max_forword_time.textContent="Maximun forword time="+data.max_forward_time
+                    sol_max_forword_time.textContent="Maximun forword velocity="+data.max_forward_time
                 }
             })
         })
