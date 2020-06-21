@@ -9,10 +9,11 @@ const min_flight_time=(battery_capacity,max_current,no_of_motors)=>{
 }
 
 const max_forward_flight=(weight,m_m_dis,radius,thrust,no_routers)=>{
-    const area=(((1/2)*(m_m_dis)*(m_m_dis))+((no_routers-1)*3.14*radius*radius))
-    const speed=((1-(1/(thrust*thrust)))*((3.55*thrust)*(Math.sqrt(weight/area))))
+    const area=(((1/2)*Math.pow(m_m_dis,2))+((no_routers-1)*3.14*Math.pow(radius,2)))
+    const speed=(Math.pow((1-(1/(thrust*thrust))),0.25)*(3.55*thrust)*(Math.sqrt(weight/area)))
     return speed
 }
+console.log(max_forward_flight(7,0.96,0.2286,2,6))
 
 const range=(speed,time)=>{
     const range=(speed*time*60)
